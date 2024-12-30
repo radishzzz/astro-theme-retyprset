@@ -1,17 +1,17 @@
-import type { ThemeConfig } from '../types'
+import type { ThemeConfig } from '~/types'
 export const themeConfig: ThemeConfig = {
 
     site: {
-        title: "radishzz",
-        subtitle: "勤于思，敏于行，讷于言",
+        title: "Retyprset",
+        subtitle: "重寻版式之美",
         url: "http://localhost:4321/",
         author: "radishzz",
         favicon: "https://image.radishzz.cc/image/favicon-round-48px.webp",
         language: "zh-CN",
         footer: [
-            "Copyright © 2024 John Doe",
-            "Powered by Next.js",
-            "All rights reserved"
+            "Built with Astro and radishzz",
+            "Website Status and Views",
+            "@radishzz 2023-2024"
         ]
     },
 

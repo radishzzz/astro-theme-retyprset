@@ -1,0 +1,43 @@
+---
+import themeConfig from "~/config"
+import '~/styles/main.css'
+---
+<!doctype html>
+<html lang="en">
+	
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/webp" href={themeConfig.site.favicon} />
+		<meta name="generator" content={Astro.generator} />
+		<title>{themeConfig.site.title}</title>
+	</head>
+
+	<body>
+		<div class="warpper">
+			<div class="header">
+				<div>
+					<h1>{themeConfig.site.title}</h1>
+					<h3>{themeConfig.site.subtitle}</h3>
+				</div>
+				<div>
+					<ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 10px;">
+						<a href="/">Posts</a>
+						<a href="/tags">Tags</a>
+						<a href="/about">About</a>
+						<a href="/en">zh/en</a>
+					</ul>
+				</div>
+				<div style="margin: 0; line-height: 0.1;">
+					<h6>Built with Astro and theme radishzz</h6>
+					<h6>Website Status and Views</h6>
+					<h6>@radishzz 2023-2024</h6>
+				</div>
+			</div>
+			<div class="body">
+				This is article!
+			</div>
+		</div>
+	</body>
+
+</html>

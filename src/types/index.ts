@@ -1,4 +1,4 @@
-import { type LanguageList } from '../i18n';
+import { type LanguageList } from '~/i18n';
 export interface ThemeConfig {
     site: {
       title: string;
