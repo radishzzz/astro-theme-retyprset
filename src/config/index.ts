@@ -1,4 +1,4 @@
-import type { ThemeConfig } from '~/types'
+import type { ThemeConfig } from '@/types'
 export const themeConfig: ThemeConfig = {
 
     site: {
@@ -8,21 +8,16 @@ export const themeConfig: ThemeConfig = {
         author: "radishzz",
         favicon: "https://image.radishzz.cc/image/favicon-round-48px.webp",
         language: "zh-CN",
-        footer: [
-            "Built with Astro and radishzz",
-            "Website Status and Views",
-            "@radishzz 2023-2024"
-        ]
     },
 
     theme: {
         color: "auto",
         light: {
-            primary: "#000000",
+            text: "#000000",
             background: "#ffffff"
         },
         dark: {
-            primary: "#ffffff", 
+            text: "#ffffff", 
             background: "#000000"
         }
     },

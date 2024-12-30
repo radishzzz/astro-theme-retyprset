@@ -1,10 +1,13 @@
+// Typescripy support config
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "lib": ["esnext", "dom"],
     "baseUrl": ".",
+    "allowJs": false,
+    "lib": ["esnext", "dom"],
+    "strictNullChecks": true,
     "paths": {
-      "~/*": ["src/*"]
+      "@/*": ["src/*"]
     }
   },
   "include": [

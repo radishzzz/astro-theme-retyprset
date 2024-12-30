@@ -1,5 +1,5 @@
 import { defineCollection, z } from 'astro:content'
-import { SupportedLanguages } from '~/i18n';
+import { SupportedLanguages } from '@/i18n';
 
 const postsCollection = defineCollection({
   schema: z.object({

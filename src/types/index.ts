@@ -1,4 +1,4 @@
-import { type LanguageList } from '~/i18n';
+import { type LanguageList } from '@/i18n';
 export interface ThemeConfig {
     site: {
       title: string;
@@ -7,17 +7,16 @@ export interface ThemeConfig {
       author: string;
       favicon: string;
       language: LanguageList;
-      footer: string[];
     };
     
     theme: {
       color: 'light' | 'dark' | 'auto';
       light: {
-        primary: string;
+        text: string;
         background: string;
       };
       dark: {
-        primary: string;
+        text: string;
         background: string;
       };
     };

@@ -1,5 +1,5 @@
 ---
-import themeConfig from "~/config"
+import themeConfig from "@/config"
 import '~/styles/main.css'
 ---
 <!doctype html>
@@ -16,23 +16,7 @@ import '~/styles/main.css'
 	<body>
 		<div class="warpper">
 			<div class="header">
-				<div>
-					<h1>{themeConfig.site.title}</h1>
-					<h3>{themeConfig.site.subtitle}</h3>
-				</div>
-				<div>
-					<ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 10px;">
-						<a href="/">Posts</a>
-						<a href="/tags">Tags</a>
-						<a href="/about">About</a>
-						<a href="/en">zh/en</a>
-					</ul>
-				</div>
-				<div style="margin: 0; line-height: 0.1;">
-					<h6>Built with Astro and theme radishzz</h6>
-					<h6>Website Status and Views</h6>
-					<h6>@radishzz 2023-2024</h6>
-				</div>
+					This is header!
 			</div>
 			<div class="body">
 				This is article!
