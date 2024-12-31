@@ -13,12 +13,14 @@ export const themeConfig: ThemeConfig = {
     theme: {
         color: "auto",
         light: {
-            text: "#000000",
-            background: "#ffffff"
+            text: "#333",
+            background: "#FFF",
+            grid: "#F3F3F3",
         },
         dark: {
-            text: "#ffffff", 
-            background: "#000000"
+            text: "#DBDBDB", 
+            background: "#121212",
+            grid: "#1B1B1B",
         }
     },
 

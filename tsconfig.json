@@ -1,4 +1,3 @@
-// Typescripy support config
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {

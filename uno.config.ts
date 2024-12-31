@@ -1,39 +1,30 @@
-import type { Theme } from 'unocss/preset-uno'
+import presetTheme from 'unocss-preset-theme';
 import { 
   defineConfig,
-  presetUno, // 默认预设
-  presetAttributify, // 为其他规则启用属性化模式
-  presetTypography, // 排版规则预设
-  transformerVariantGroup, // Windi CSS变体组转换器
-  transformerDirectives, // CSS指令转换器（@apply ）
+  presetUno,
+  presetAttributify,
+  presetTypography,
+  transformerVariantGroup,
+  transformerDirectives,
 } from 'unocss';
-import presetTheme from 'unocss-preset-theme';
-import themeConfig from '@/config';
-
-const cssExtend = {
-  'li': {
-    'white-space': 'normal',
-    'word-wrap': 'break-word',
-  },
-}
+import type { Theme } from 'unocss/preset-uno'
+import { themeConfig } from '@/config';
 
 export default defineConfig({
   presets: [
     presetUno(),
     presetAttributify(),
-    presetTypography({ cssExtend }),
+    presetTypography(),
     presetTheme<Theme>({
       theme: {
         dark: {
-          colors: { ...themeConfig.theme.dark },
+          colors: { ...themeConfig.theme.dark }
         },
       },
     }),
   ],
   theme: {
-    dark: {
-      colors: { ...themeConfig.theme.light },
-    },
+    colors: { ...themeConfig.theme.light },
   },
   shortcuts: {
     'title': 'text-5 font-bold lh-7.5 m-0',
@@ -52,4 +43,4 @@ export default defineConfig({
       ([, start, end]) => ({ 'grid-column': `${start}/${end}` }),
     ],
   ],
-});
+})

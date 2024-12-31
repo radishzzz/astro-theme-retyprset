@@ -1,26 +1,38 @@
 :root {
-    --theme-colors-primary: theme('colors.primary');
-    --theme-colors-background: theme('colors.background');
+    --uno-colors-text: theme('colors.text');
+    --uno-colors-background: theme('colors.background');
+    --uno-colors-grid: theme('colors.grid');
 }
 
 * { 
     box-sizing: border-box; 
 }
 
+/* bug 必须使用一次 theme('colors.grid') 才能使 var(--uno-colors-grid) 解析生效 */
+.bug { --at-apply: 'bg-grid' }
+
 html {
+    --at-apply: antialiased;
+    --at-apply: 'c-text bg-background';
     font-size: 10px;
-    background-color: #ffffff;
-    background-image: 
-      linear-gradient(to right, #F3F3F3 1px, transparent 1px),
-      linear-gradient(to bottom, #F3F3F3 1px, transparent 1px);
     background-size: 7px 7px;
-  }
+    background-image: 
+    linear-gradient(to right, var(--uno-colors-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--uno-colors-grid) 1px, transparent 1px);
+}
 
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
 }
+
+ul, li {
+    word-wrap: break-word;
+    list-style: none;
+}
+
+
 
 .warpper {
     height: 100vh;

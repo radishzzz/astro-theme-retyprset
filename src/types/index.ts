@@ -14,10 +14,12 @@ export interface ThemeConfig {
       light: {
         text: string;
         background: string;
+        grid: string;
       };
       dark: {
         text: string;
         background: string;
+        grid: string;
       };
     };
     
