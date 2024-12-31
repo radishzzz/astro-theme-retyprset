@@ -14,14 +14,68 @@ import '@/styles/main.css'
 	</head>
 
 	<body>
-		<div class="warpper">
-			<div class="header">
-				This is header!
+		<!-- container -->
+		<div class="
+		h-screen
+	    max-w-[1360px]
+	    min-w-[360px]
+	    m-auto
+		p-[clamp(30px,8vw,80px)_clamp(30px,8vw,80px)_0_clamp(30px,8vw,80px)]
+		grid
+		grid-cols-[1fr_250px]
+		grid-rows-[160px_1fr]
+		lg:p-[80px_80px_0px_80px] "
+		>
+		    <!-- header container -->
+		    <div class="
+   		    col-start-1
+			col-end-3
+  		    row-start-1
+			row-end-2
+			lg:col-start-2
+			lg:col-end-3
+ 		    lg:row-start-1
+			lg:row-end-3
+			grid
+			grid-cols-1
+			grid-rows-1 "
+			>
+			This is header!
 			</div>
-			<div class="body">
-				This is article!
+			<!-- main container -->
+			<div class="
+   		    col-start-1
+			col-end-3
+  		    row-start-2
+			row-end-3
+			lg:col-start-1
+			lg:col-end-2
+ 		    lg:row-start-1
+			lg:row-end-3
+			grid
+		    grid-cols-[1fr_clamp(80px,26.3%,250px)]
+			grid-rows-[8fr_1fr] "
+			>
+			    <!-- artitle container -->
+				<div class="
+				col-start-1
+			    col-end-3
+  		        row-start-1
+			    row-end-3
+			    lg:col-start-1
+			    lg:col-end-2
+ 		        lg:row-start-1
+			    lg:row-end-3
+				grid
+				grid-cols-1
+				grid-rows-1 "
+				>
+				    <!-- year group container -->
+					 <div  class="
+					 ">
+					 </div>
+			    </div>
 			</div>
 		</div>
 	</body>
-
 </html>

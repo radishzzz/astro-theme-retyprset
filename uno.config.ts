@@ -27,7 +27,7 @@ export default defineConfig({
     colors: { ...themeConfig.theme.light },
   },
   shortcuts: {
-    'title': 'text-5 font-bold lh-7.5 m-0',
+    'post-title': 'text-5 font-bold lh-7.5 m-0',
   },
   transformers: [
     transformerDirectives(), 
@@ -35,12 +35,22 @@ export default defineConfig({
   ],
   rules: [
     [
-      /^row-(\d+)-(\d)$/,
-      ([, start, end]) => ({ 'grid-row': `${start}/${end}` }),
+      /^grid-\[([\w\d\s_-]+)\]-\[([\w\d\s_-]+)\]$/,
+      
+      ([, cols, rows]) => ({
+        display: 'grid',
+        'grid-template-columns': cols.replace(/_/g, ' '),
+        'grid-template-rows': rows.replace(/_/g, ' ')
+      })
     ],
     [
-      /^column-(\d+)-(\d)$/,
-      ([, start, end]) => ({ 'grid-column': `${start}/${end}` }),
+      /^se-(\d+)-(\d+)-(\d+)-(\d+)$/,
+      ([, colStart, colEnd, rowStart, rowEnd]) => ({
+        'grid-column-start': colStart,
+        'grid-column-end': colEnd,
+        'grid-row-start': rowStart,
+        'grid-row-end': rowEnd,
+      }),
     ],
   ],
 })
